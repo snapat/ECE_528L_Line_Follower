@@ -9,3 +9,24 @@ The Line Follower lab interfaces with the following:
 * User LEDs of the TI MSP432 LaunchPad
 * Pololu Gearmotor with Encoder - [Product Link](https://www.pololu.com/product/3675)
 * 8-Channel QTRX Sensor Array - [Product Link](https://www.pololu.com/product/3672)
+
+##Pre-Lab Assignment
+1.
+```c
+void Chassis_Board_LEDs_Init()
+{
+  P8->SEL0 &= ~(0xE1);  // Clear to select GPIO function
+  P8->SEL1 &= ~(0xE1);
+  
+  P8->OUT &= ~(0xE1);   // Output pins set to zero
+
+  P8->DIR |= 0xE1;      // Pins configured as output
+
+}
+```
+
+
+
+
+
+
